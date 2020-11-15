@@ -5,8 +5,8 @@ The script will prompt you for your server name. This is what you will look for 
 
 ## Instructions
 First, SSH into your fresh Debian 10 server.
-Download the start.sh from our repository. 
-Use <code>chmod +x start.sh</code> to enable it as an executable.
+Download the start.sh from our repository.
+Use chmod +x start.sh to enable it as an executable.
 You may then use ./start.sh to deploy the server.
 
 ## Detailed explanation
@@ -16,3 +16,4 @@ In the next step, the script downloads the 0.7 server release, extracts & then d
 The script uses sed to change the server config to use verbose server info, and change the servername to your input.
 After the script is complete, you may press any key to return to console. The server is now running in a screen which will stay open when you close your SSH connection. 
 If you want to open the screen for the server, use screen -r
+ 
