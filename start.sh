@@ -1,3 +1,10 @@
+# Script created by:
+# Rowen Paredes
+# 
+# github.com/RowenPM
+#
+sudo apt-get update 
+sudo apt-get upgrade
 #Taking input for the servername at the beginning of the script to 
 read -p "Enter your desired server name:" fullname
 
