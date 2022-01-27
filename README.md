@@ -17,3 +17,10 @@ The script uses sed to change the server config to use verbose server info, and 
 After the script is complete, you may press any key to return to console. The server is now running in a screen which will stay open when you close your SSH connection. <br>
 If you want to open the screen for the server, use screen -r<br>
  
+## Instructions for Linode deployment
+Launch a linode server with 1GB of RAM using a Debian 11 image.
+Then SSH into the server using the IP provided
+ssh root@IP_PROVIDED 
+Install ZSH Shell
+mkdir Tekkit
+cd Tekkit
