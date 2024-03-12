@@ -1,11 +1,20 @@
 # TES3MP-DEPLOYMENT
 ## About
-This script was developed to automate the deployment of the tes3mp server onto a fresh Debian 10 installation.<br>
-The script will prompt you for your server name. This is what you will look for in the tes3mp server browser.<br>
+This script was developed to automate the deployment of the tes3mp server onto a fresh Debian 12 VPS.<br>
+The script will install dependencies, then prompt you for the name your server will as it will appear in the tes3mp server browser.<br>
 
 ## Instructions
-First, SSH into your fresh Debian 10 server.<br>
-Download the start.sh from our repository.<br>
+Using Linode, create a VPS. For this deployment we select the following settings:
+Image: Debian 12
+Plan: 1GB Shared CPU ($5/month)
+
+Using a shell, connect to your VPS:
+ssh root@vpsdomain.com
+<br>
+
+Download the start.sh from our repository:
+
+<br>
 Use chmod +x start.sh to enable it as an executable.<br>
 You may then use ./start.sh to deploy the server.<br>
 
