@@ -15,8 +15,8 @@ ssh root@vpsdomain.com
 Download the start.sh from our repository:
 wget https://github.com/RowenPM/TES3MP-DEPLOYMENT/blob/main/start.sh
 <br>
-Use the following command to enable it as an executable and execute it to deploy the server
-Use chmod +x start.sh .<br>
+Use the following command to enable it as an executable and execute it to deploy the server:
+chmod +x start.sh <br>
 You may then use ./start.sh to deploy the server.<br>
 
 ## Detailed explanation
