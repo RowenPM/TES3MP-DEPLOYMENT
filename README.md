@@ -9,12 +9,13 @@ Image: Debian 12
 Plan: 1GB Shared CPU ($5/month)
 
 Using a shell, connect to your VPS:
-    ssh root@vpsdomain.com
+```ssh root@vpsdomain.com
 <br>
 Download the start.sh from our repository:
-    wget https://raw.githubusercontent.com/RowenPM/TES3MP-DEPLOYMENT/main/start.sh<br>
+```wget https://raw.githubusercontent.com/RowenPM/TES3MP-DEPLOYMENT/main/start.sh<br>
 Use the following command to enable it as an executable and execute it to deploy the server:<br>
-    chmod +x start.sh && ./start.sh<br>
+```chmod +x start.sh && ./start.sh
+
 
 ## Detailed explanation
 The script first prompts you for your server's display name, which is the only input required during the script.
