@@ -13,7 +13,7 @@ Using a shell, connect to your VPS:
 <br>
 Download the start.sh from our repository:
     wget https://raw.githubusercontent.com/RowenPM/TES3MP-DEPLOYMENT/main/start.sh<br>
-Use the following command to enable it as an executable and execute it to deploy the server:
+Use the following command to enable it as an executable and execute it to deploy the server:<br>
     chmod +x start.sh && ./start.sh<br>
 
 ## Detailed explanation
