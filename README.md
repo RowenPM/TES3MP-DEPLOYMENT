@@ -9,21 +9,24 @@ Image: Debian 12
 Plan: 1GB Shared CPU ($5/month)
 
 Using a shell, connect to your VPS:
-ssh root@vpsdomain.com
+    ssh root@vpsdomain.com
 <br>
-
 Download the start.sh from our repository:
-wget https://github.com/RowenPM/TES3MP-DEPLOYMENT/blob/main/start.sh
-<br>
+    wget https://raw.githubusercontent.com/RowenPM/TES3MP-DEPLOYMENT/main/start.sh<br>
 Use the following command to enable it as an executable and execute it to deploy the server:
-chmod +x start.sh <br>
-You may then use ./start.sh to deploy the server.<br>
+    chmod +x start.sh && ./start.sh<br>
 
 ## Detailed explanation
-The script installs UFW and allows traffic on ports 22 (SSH), 25565(TES3MP), 25560(Server Masterlist).<br>
-Then, it installs both libluajit-5.1-2 and libgl1 (Required for the server).<br>
-In the next step, the script downloads the 0.7 server release, extracts & then deletes the archive. Then it enters the directory and makes sure sed is installed.<br>
-The script uses sed to change the server config to use verbose server info, and change the servername to your input.<br>
-After the script is complete, you may press any key to return to console. The server is now running in a screen which will stay open when you close your SSH connection. <br>
-If you want to open the screen for the server, use screen -r<br>
- 
+The script first prompts you for your server's display name, which is the only input required during the script.
+Afterwards, the script updates and upgrades the packages of the system which it is running on, and installs all required packages:
+- libluajit-5.1-2 which is required for the server
+- screen which is used to run the server process in the background
+- ufw which is a firewall to only allow traffic on three specific ports:
+   - 22 (SSH)
+   - 25565 (TES3MP)
+   - 25560 (Server Masterlist)
+
+It enables the firewall, and then it downloads the official TES3MP 0.8.1 server build, extracts it, cleans up the archive, navigates into the folder and manipulates the server config to add the server display name and change the verbosity of the logs.
+The final thing it does is launch the tes3mp server in a detached screen, and provide you a confirmation message.
+
+You can now open tes3mp server browser and find your server according to the name entered
